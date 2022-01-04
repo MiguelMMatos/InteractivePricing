@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Frontend Mentor | Interactive pricing component</title>
+    <script src="https://kit.fontawesome.com/bda882da3e.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="title">Simple, traffic-based pricing</h1>
+        <h3 class="sub-title"> Sign-up for our 30-day trial. No credit card required. </h3>
+    </header>
+
+    <div class="pricing-container">
+        <div class="prices-container">
+            <div class="price-information">100k PAGEVIEWS</div>
+            <div class="price-current">
+                <div class="price">$16.00</div>
+                /month
+            </div>
+        </div>
+        <div class="wrap">
+            <input type="range" class="range" min="5" max="50" step="1" value="5">
+            <div class="track">
+                <div class="track-inner"></div>
+            </div>
+            <div class="thumb">
+                <i class="fas fa-arrows-alt-h thumb-icon"></i>
+            </div>
+        </div>
+        <div class="billing-options flex">
+            <div class="flex">
+                <h2 class="switch-text">Monthly Billing</h2>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider round"></span>
+                </label>
+                <h2 class="switch-text">Yearly Billing</h2>
+            </div>
+        </div>
+        <div class="start-trial">
+            <ul>
+                <li><i class="fas fa-check-square"></i>Unlimited websites</li>
+                <li><i class="fas fa-check-square"></i>100% data ownership</li>
+                <li><i class="fas fa-check-square"></i> Email reports</li>
+            </ul>
+            <button>Start My Trial</button>
+        </div>
+    </div>
+
+    <script src="./js/slider.js"></script>
+</body>
+
+</html>

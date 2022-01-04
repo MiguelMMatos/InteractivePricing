@@ -1,0 +1,343 @@
+:root {
+    /* Colors */
+    --soft-Cyan: hsl(174, 77%, 80%);
+    --strong-Cyan: hsl(174, 86%, 45%);
+    --light-Grayish-Red: hsl(14, 92%, 95%);
+    --light-Red: hsl(15, 100%, 70%);
+    --pale-Blue: hsl(226, 100%, 87%);
+    --white: hsl(0, 0%, 100%);
+    --very-Pale-Blue: hsl(230, 100%, 99%);
+    --light-Grayish-Blue: hsl(224, 65%, 95%);
+    --light-Grayish-Blue: hsl(223, 50%, 87%);
+    --grayish-Blue: hsl(225, 20%, 60%);
+    --dark-Desaturated-Blue: hsl(227, 35%, 25%);
+    /* slider */
+    --slider-height: 10px;
+    --slider-border-radius: 50px;
+    /* Family */
+    --font-family: 'Manrope', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+header {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    padding-block: 50px;
+    text-align: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-Grayish-Blue);
+    font-family: var(--font-family);
+}
+
+
+/* Header */
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.sub-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--grayish-Blue);
+}
+
+
+/* Pricing Container */
+
+.pricing-container {
+    width: 40%;
+    border-radius: 20px;
+    background: var(--white);
+}
+
+.prices-container {
+    width: 100%;
+    height: 80px;
+    margin-block: 50px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    font-weight: 900;
+}
+
+.price-information {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.price-current {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price {
+    font-size: 3rem;
+    margin-inline: 5px;
+}
+
+
+/* Slider */
+
+.wrap {
+    width: 80%;
+    margin-top: 100px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.range {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 10;
+}
+
+.range::-ms-tooltip {
+    display: none;
+}
+
+.track {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: var(--slider-height);
+    background: transparent;
+    border-radius: var(--slider-border-radius);
+    background: var(--light-Grayish-Blue);
+}
+
+.track-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--slider-border-radius);
+    background: var(--soft-Cyan);
+}
+
+.thumb {
+    position: relative;
+    transform: translateY(-45%);
+    left: 100%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--strong-Cyan);
+    cursor: pointer;
+    box-shadow: 0 0 2rem var(--strong-Cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumb-icon {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+
+/* Billing Options */
+
+
+/* Slider */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--light-Grayish-Blue);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: var(--strong-Cyan);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.switch-text {
+    margin-inline: 15px;
+    font-size: 1.3rem;
+}
+
+.billing-options {
+    justify-content: space-around;
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--dark-Desaturated-Blue);
+}
+
+
+/* Start Trial */
+
+.start-trial {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-block: 20px;
+}
+
+.start-trial button {
+    padding: 20px;
+    margin-inline: 30px;
+    border: 0;
+    border-radius: 40px;
+    font-size: 1.4rem;
+    background: var(--dark-Desaturated-Blue);
+    color: var(--white);
+    cursor: pointer;
+}
+
+li {
+    margin-block: 10px;
+}
+
+li i {
+    padding-inline: 10px;
+    font-size: 1.3rem;
+    color: var(--strong-Cyan);
+}
+
+@media only screen and (max-width: 375px) {
+    /* Header */
+    header {
+        padding: 30px;
+    }
+    .title {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+    .sub-title {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--grayish-Blue);
+    }
+    /* Pricing Container */
+    .pricing-container {
+        width: 90%;
+    }
+    .prices-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        align-items: center;
+        font-weight: 900;
+    }
+    .price-information {
+        font-size: 1.2rem;
+    }
+    .price-current {
+        margin-block: 20px;
+    }
+    .price {
+        font-size: 2rem;
+        margin-inline: 5px;
+    }
+    /* Switch */
+    .switch-text {
+        margin-inline: 15px;
+        font-size: 1rem;
+    }
+    /* Start Trial */
+    .start-trial {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-block: 20px;
+    }
+    .start-trial button {
+        padding-block: 15px;
+        padding-inline: 40px;
+        margin-block: 20px;
+        font-size: 1.4rem;
+    }
+}
+
+
+/* Utility classes */
+
+.flex {
+    display: flex;
+}
+
+.justificyCenter {
+    justify-content: center;
+}
+
+.alignCenter {
+    align-items: center;
+}
